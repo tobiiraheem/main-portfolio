@@ -68,27 +68,27 @@ export const navLinks = [
 export const socials = [
   {
     id: "linkedin",
-    url: "https://www.linkedin.com/in/raheem-isaac/",
+    url: "https://www.linkedin.com/in/oluwatobiloba-raheem",
     icon: linkedin,
   },
   {
     id: "twitter",
-    url: "https://twitter.com/raim_io",
+    url: "https://twitter.com/tobiiraheem",
     icon: twitter,
   },
   {
     id: "github",
-    url: "https://github.com/raim-io",
+    url: "https://github.com/tobiiraheem",
     icon: githubProfile,
   },
   {
     id: "gitlab",
-    url: "http://gitlab.com/raim.io",
+    url: "http://gitlab.com/tobiiraheem",
     icon: gitlab,
   },
   {
     id: "instagram",
-    url: "https://instagram.com/raim.io",
+    url: "https://instagram.com/tobiiraheem",
     icon: instagram,
   },
 ]
@@ -232,7 +232,7 @@ const projects = [
       },
     ],
     image: userMgmt,
-    source_code_link: "https://github.com/raim-io/ejs-user_management-crud_application.git",
+    source_code_link: "https://github.com/tobiiraheem/ejs-user_management-crud_application.git",
     site_link: "",
   },
   {
@@ -250,7 +250,7 @@ const projects = [
       },
     ],
     image: reactPlanner,
-    source_code_link: "https://github.com/raim-io/react-planner-app.git",
+    source_code_link: "https://github.com/tobiiraheem/react-planner-app.git",
     site_link: "https://raim-planner-app.netlify.app/",
   },
 ];
