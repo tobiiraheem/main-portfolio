@@ -8,7 +8,7 @@ import webDev from "./skills/web-dev.png";
 import devops from "./skills/devops.png";
 import techWriter from "./skills/tech-writer.png";
 
-import logo from "./raim_io-logo.png";
+import logo from "./tobiiraheem-logo.png";
 import backend from "./backend.png";
 import creator from "./creator.png";
 import mobile from "./mobile.png";
