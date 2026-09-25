@@ -88,7 +88,7 @@ const Contact = () => {
             value={form.name}
             onChange={handleChange}
             placeholder="What's your name"
-            className="py-4 px-6 bg-tertiary text-white font-medium rounded-lg border-none outline-none placeholder:text-secondary placeholder:opacity-50"
+            className="py-4 px-6 bg-tertiary text-white font-medium rounded-lg border-none outline-hidden placeholder:text-secondary placeholder:opacity-50"
           ></input>
         </label>
 
@@ -100,7 +100,7 @@ const Contact = () => {
             value={form.email}
             onChange={handleChange}
             placeholder="e.g johndoe@example.com"
-            className="py-4 px-6 bg-tertiary text-white font-medium rounded-lg border-none outline-none placeholder:text-secondary placeholder:opacity-50"
+            className="py-4 px-6 bg-tertiary text-white font-medium rounded-lg border-none outline-hidden placeholder:text-secondary placeholder:opacity-50"
           ></input>
         </label>
 
@@ -113,13 +113,13 @@ const Contact = () => {
             value={form.message}
             onChange={handleChange}
             placeholder="Write your message"
-            className="py-4 px-6 bg-tertiary text-white font-medium rounded-lg border-none outline-none placeholder:text-secondary placeholder:opacity-50"
+            className="py-4 px-6 bg-tertiary text-white font-medium rounded-lg border-none outline-hidden placeholder:text-secondary placeholder:opacity-50"
           ></textarea>
         </label>
 
         <button
           type="submit"
-          className="bg-tertiary px-8 py-3 text-white outline-none rounded-xl shadow-primary font-bold w-fit hover:opacity-50"
+          className="bg-tertiary px-8 py-3 text-white outline-hidden rounded-xl shadow-primary font-bold w-fit hover:opacity-50"
         >
           {loading ? "Sending..." : "Send"}
         </button>
