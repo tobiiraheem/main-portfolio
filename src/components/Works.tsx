@@ -4,7 +4,6 @@ import { styles } from "../styles"
 import { SectionWrapper } from "../hoc"
 import { projects } from "../constants"
 import { github, website } from "../assets"
-import { Tilt } from "react-tilt"
 import { fadeIn, textVariant } from "../utils/motion"
 import { motion } from "framer-motion"
 
@@ -18,7 +17,7 @@ const ProjectCard = ({
 }) => {
   return (
     <motion.div variants={fadeIn("up", "spring", index * 0.5, 0.75)}>
-      <Tilt
+      <div
         className="w-full p-5 bg-tertiary rounded-[5px] sm:w-[360px]"
         options={{
           max: 8,
@@ -66,7 +65,7 @@ const ProjectCard = ({
             </div>
           </div>
         </div>
-      </Tilt>
+      </div>
     </motion.div>
   )
 }
