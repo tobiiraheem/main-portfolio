@@ -1,0 +1,21 @@
+import Hero from "./Hero"
+import Navbar from "./Navbar"
+import About from "./About"
+import TechStack from "./TechStack"
+import Experience from "./Experience"
+import Works from "./Works"
+import Feedbacks from "./Feedbacks"
+import Contact from "./Contact"
+import Loader from "./Loader"
+
+export {
+  Hero,
+  Navbar,
+  About,
+  TechStack,
+  Experience,
+  Works,
+  Feedbacks,
+  Contact,
+  Loader,
+}

@@ -10,10 +10,6 @@ import {
   webDev,
   devops,
   techWriter,
-  mobile,
-  backend,
-  creator,
-  web,
 
   // tech stack icons
   javascript,
@@ -21,12 +17,10 @@ import {
   html,
   css,
   reactjs,
-  redux,
   tailwind,
   nodejs,
   mongodb,
   git,
-  figma,
   docker,
   threejs,
   aws,
@@ -36,17 +30,11 @@ import {
 
   // experience icons
   meta,
-  starbucks,
-  tesla,
-  shopify,
 
   // project images
   userMgmt,
   reactPlanner,
-   carrent,
-  jobit,
-  tripguide,
-} from "../assets";
+} from "../assets"
 
 // navigation links
 export const navLinks = [
@@ -62,7 +50,7 @@ export const navLinks = [
     id: "contact",
     title: "Contact",
   },
-];
+]
 
 // social profiles
 export const socials = [
@@ -93,7 +81,6 @@ export const socials = [
   },
 ]
 
-
 // services or skills
 const services = [
   {
@@ -108,7 +95,7 @@ const services = [
     title: "Technical Writing",
     icon: techWriter,
   },
-];
+]
 
 // tech stack
 const technologies = [
@@ -180,7 +167,7 @@ const technologies = [
     name: "Jenkins",
     icon: jenkins,
   },
-];
+]
 
 // experiences/history of work
 const experiences = [
@@ -197,7 +184,7 @@ const experiences = [
       "Participating in code reviews and providing constructive feedback to other developers.",
     ],
   },
-];
+]
 
 // feeabacks/testimonials
 const testimonials = [
@@ -207,9 +194,10 @@ const testimonials = [
     name: "Ismail Adedamola",
     designation: "CEO",
     company: "AUTODAMS Nig.",
-    image: "https://media.licdn.com/dms/image/C5603AQG9tqkjOQgc_Q/profile-displayphoto-shrink_800_800/0/1648905982893?e=2147483647&v=beta&t=x64Q8Szvh6kHzDVYqqeJttOq5Bh-o1RLjlAQWYjicVE",
+    image:
+      "https://media.licdn.com/dms/image/C5603AQG9tqkjOQgc_Q/profile-displayphoto-shrink_800_800/0/1648905982893?e=2147483647&v=beta&t=x64Q8Szvh6kHzDVYqqeJttOq5Bh-o1RLjlAQWYjicVE",
   },
-];
+]
 
 // projects or works
 const projects = [
@@ -232,7 +220,8 @@ const projects = [
       },
     ],
     image: userMgmt,
-    source_code_link: "https://github.com/tobiiraheem/ejs-user_management-crud_application.git",
+    source_code_link:
+      "https://github.com/tobiiraheem/ejs-user_management-crud_application.git",
     site_link: "",
   },
   {
@@ -253,6 +242,6 @@ const projects = [
     source_code_link: "https://github.com/tobiiraheem/react-planner-app.git",
     site_link: "https://raim-planner-app.netlify.app/",
   },
-];
+]
 
-export { services, technologies, experiences, testimonials, projects };
+export { services, technologies, experiences, testimonials, projects }
