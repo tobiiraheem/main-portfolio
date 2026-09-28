@@ -1,88 +1,70 @@
 import { useState } from "react"
-import { Link } from "react-router-dom"
-import { styles } from "../styles"
+import Icon from "./Icon"
+import { Theme, useTheme } from "../hooks/useTheme"
 
-import { navLinks } from "../constants"
-import { menu, close } from "../assets"
+const navItems = [
+  "About",
+  "Experience",
+  "Projects",
+  "Research",
+  "Skills",
+  "Education",
+  "Contact",
+]
 
 const Navbar = () => {
-  // keep track of the current position on screen
-  const [Active, setActive] = useState("")
-  const [sidebar, setSidebar] = useState(false)
+  const [openMenu, setOpenMenu] = useState(false)
+  const { theme, toggle: toggleTheme } = useTheme()
 
   return (
-    <nav
-      className={`${styles.paddingX} w-full flex items-center py-8 top-0 z-20 bg-primary`}
-    >
-      <div className="w-full flex justify-between items-center max-w-7xl mx-auto">
-        <Link
-          className="flex items-center gap-5"
-          to="/"
-          onClick={() => {
-            setPosition("")
-            window.scrollTo(0, 0)
-          }}
-        >
-          <img
-            src=""
-            alt="logo-text"
-            className="w-20 lg:w-30 xl:w-40 h-20 object-contain"
-          />
-        </Link>
-        <ul className="list-none hidden sm:flex flex-row gap-10">
-          {navLinks.map((link) => (
-            <li
-              key={link.id}
-              className={`${
-                Active === link.title ? "text-white" : "text-secondary"
-              } hover:text-white hover:opacity-50 text-[18px]
-              font-medium
-              cursor-pointer`}
-              onClick={() => setActive(link.title)}
-            >
-              <a href={`#${link.id}`}>{link.title}</a>
-            </li>
-          ))}
-        </ul>
+    <header className="fixed inset-x-0 top-0 z-50 flex h-16 items-center justify-between gap-8 px-[max(4vw,1.25rem)] bg-nav border-b border-border/70 backdrop-blur-[18px] shadow-card font-display md:h-18">
+      <a
+        href="#home"
+        aria-label="Raheem Oluwatobiloba, home"
+        className="flex items-center gap-3 no-underline"
+      >
+        <span className="grid place-items-center w-10 h-10 rounded-2xl text-[#06161c] bg-[#67d7cf] text-sm font-extrabold">
+          RO
+        </span>
+        <strong className="hidden text-base sm:block">
+          Raheem Oluwatobiloba
+        </strong>
+      </a>
 
-        {/* mobile navigation view */}
-        <div className="sm:hidden flex flex-1 justify-end items-end items-center">
-          <img
-            src={sidebar ? close : menu}
-            alt="side-bar"
-            className="w-[22px] h-[22px] cursor-pointer object-contain"
-            onClick={() => setSidebar(!sidebar)}
-          />
-
-          <div
-            className={`${!sidebar ? "hidden" : "flex"} p-6 absolute top-20 right-0 black-gradient mx-4 min-w-[150px] rounded-xl`}
+      <nav
+        aria-label="Main navigation"
+        className={`flex flex-col items-stretch gap-1 p-2 fixed inset-x-4 top-16 bg-surface border border-border rounded-2xl shadow-card transition-all duration-200 md:static md:flex-row md:items-center md:gap-4 md:p-0 md:bg-transparent md:border-0 md:rounded-none md:shadow-none md:translate-y-0 md:opacity-100 md:visible lg:gap-6 ${openMenu ? "opacity-100 visible translate-y-0" : "opacity-0 invisible -translate-y-4"}`}
+      >
+        {navItems.map((item) => (
+          <a
+            key={item}
+            href={`#${item.toLowerCase()}`}
+            onClick={() => setOpenMenu(false)}
+            className="text-sm font-semibold text-muted transition-colors hover:text-accent"
           >
-            <ul className="list-none flex justify-end items-start flex-col gap-4">
-              {navLinks.map((link) => (
-                <li
-                  key={link.id}
-                  className={`${
-                    Active === link.title ? "text-white" : "text-secondary"
-                  } hover:text-white text-[16px]
-                  font-medium font-poppings
-                  cursor-pointer`}
-                  onClick={() => {
-                    setSidebar(!sidebar)
-                    {
-                      /* you could also use setSidebar(!Sidebar) */
-                    }
-                    setActive(link.title)
-                  }}
-                >
-                  <a href={`#${link.id}`}>{link.title}</a>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </div>
+            {item}
+          </a>
+        ))}
+      </nav>
+
+      <div className="flex gap-2">
+        <button
+          aria-label="Toggle theme"
+          onClick={toggleTheme}
+          className="grid place-items-center w-10 h-10 p-0 rounded-full text-foreground bg-surface border border-border  transition-all hover:text-accent hover:translate-y-px"
+        >
+          <Icon name={theme === Theme.dark ? "sun" : "moon"} />
+        </button>
+        <button
+          aria-label="Toggle menu"
+          aria-expanded={openMenu}
+          onClick={() => setOpenMenu(!openMenu)}
+          className="grid place-items-center w-10 h-10 p-0 rounded-full text-foreground bg-surface border border-border transition-all hover:text-accent hover:translate-y-px md:hidden"
+        >
+          <Icon name={openMenu ? "close" : "menu"} />
+        </button>
       </div>
-    </nav>
+    </header>
   )
 }
-
 export default Navbar
