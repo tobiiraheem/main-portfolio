@@ -11,8 +11,11 @@ const Hero = () => {
       <div className="hero-bg" aria-hidden="true" />
 
       <div className="w-full max-w-232.5 min-w-0 text-center">
-        <p className="eyebrow flex justify-center items-center gap-[.65rem] text-accent-2 text-[.5rem] sm:text-[.76rem]">
-          <span className="w-6.5 h-px bg-current" aria-hidden="true" />
+        <p className="eyebrow flex justify-center items-center gap-1 text-accent-2 text-[.5rem] sm:text-[.76rem]">
+          <span
+            className="w-1.5 h-1.5 bg-current rounded-full"
+            aria-hidden="true"
+          />
           Software Engineer
         </p>
 
