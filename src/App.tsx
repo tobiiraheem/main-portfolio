@@ -9,6 +9,7 @@ import {
   TechStack,
   Works,
 } from "./components"
+import { Section } from "./components/Section"
 
 const App = () => {
   return (
@@ -23,18 +24,22 @@ const App = () => {
 
       <main id="main">
         <Hero />
-
-        <div>
+        <Section id="about">
           <About />
-          {/* <Experience />
-            {/* <Experience /> */}
+        </Section>
+        {/* <Experience /> */}
+        <Section id="tech" alternate>
           <TechStack />
+        </Section>
+        <Section id="works">
           <Works />
+        </Section>
+        <Section id="feedbacks" alternate>
           <Feedbacks />
-          <div className="relative z-0">
-            <Contact />
-          </div>
-        </div>
+        </Section>
+        <Section id="contact">
+          <Contact />
+        </Section>
       </main>
     </BrowserRouter>
   )

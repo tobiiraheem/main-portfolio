@@ -24,7 +24,25 @@
   --color-accent-3: #284f8940;
   --color-accent-soft: #dff2ed;
   --color-nav: rgba(250, 251, 246, 0.88);
-
+  --color-section-bg:
+    radial-gradient(
+      circle at 95% 10%,
+      rgba(102, 206, 190, 0.13),
+      transparent 26rem
+    ),
+    radial-gradient(
+      circle at 5% 90%,
+      rgba(245, 190, 112, 0.1),
+      transparent 24rem
+    ),
+    var(--color-background);
+  --color-section-alt-bg:
+    linear-gradient(
+      135deg,
+      rgba(224, 241, 238, 0.92),
+      rgba(236, 238, 249, 0.9)
+    ),
+    var(--color-surface-2);
   --shadow-card: 0 22px 60px rgba(29, 78, 82, 0.12);
 
   --animate-scroll-pulse: scrollPulse 1.7s ease-in-out infinite;
@@ -51,6 +69,8 @@
   --color-accent-2: #91eadf;
   --color-accent-soft: #183633;
   --color-nav: rgba(16, 16, 18, 0.87);
+  --color-section-bg: var(--color-background);
+  --color-section-alt-bg: #1a171b;
 
   --shadow-card: 0 26px 75px rgba(0, 0, 0, 0.38);
 }
@@ -193,6 +213,14 @@
     background: color-mix(in srgb, var(--color-foreground) 13%, transparent);
     transform: translateY(-2px);
   }
+}
+
+@utility section-bg {
+  background: var(--color-section-bg);
+}
+
+@utility section-alt-bg {
+  background: var(--color-section-alt-bg);
 }
 
 .hash-span {

@@ -1,7 +1,6 @@
 // @ts-nocheck
 
 import { styles } from "../styles"
-import { SectionWrapper } from "../hoc"
 import emailjs from "@emailjs/browser"
 import { useState, useRef } from "react"
 import { EarthCanvas } from "./canvas"
@@ -128,4 +127,4 @@ const Contact = () => {
   )
 }
 
-export default SectionWrapper(Contact, "contact")
+export default Contact

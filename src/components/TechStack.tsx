@@ -1,4 +1,3 @@
-import { SectionWrapper } from "../hoc"
 import { technologies } from "../constants"
 
 const TechStack = () => {
@@ -13,4 +12,4 @@ const TechStack = () => {
   )
 }
 
-export default SectionWrapper(TechStack, "")
+export default TechStack

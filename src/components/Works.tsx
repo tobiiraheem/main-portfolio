@@ -1,7 +1,6 @@
 // @ts-nocheck
 
 import { styles } from "../styles"
-import { SectionWrapper } from "../hoc"
 import { projects } from "../constants"
 import { github, website } from "../assets"
 import { fadeIn, textVariant } from "../utils/motion"
@@ -102,4 +101,4 @@ const Works = () => {
   )
 }
 
-export default SectionWrapper(Works, "work")
+export default Works

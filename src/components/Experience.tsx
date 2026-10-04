@@ -4,7 +4,6 @@ import { styles } from "../styles"
 import { experiences } from "../constants"
 import { motion } from "framer-motion"
 import { textVariant } from "../utils/motion"
-import { SectionWrapper } from "../hoc"
 
 import "react-vertical-timeline-component/style.min.css"
 import {
@@ -71,4 +70,4 @@ const Experience = () => {
   )
 }
 
-export default SectionWrapper(Experience, "work")
+export default Experience
