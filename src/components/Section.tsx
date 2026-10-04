@@ -16,7 +16,7 @@ export function Section(props: SectionProps) {
         ${!props.alternate ? "section-bg" : "section-alt-bg"} 
         ${props.className ?? ""}`}
     >
-      <div className="w-[min(1160px,calc(100%-2.5rem))] mx-auto">
+      <div className="w-[min(100%-1.5rem,1160px)] mx-auto sm:w-[min(1160px,calc(100%-2.5rem))] ">
         {props.children}
       </div>
     </section>
