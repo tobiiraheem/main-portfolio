@@ -33,14 +33,14 @@ const Navbar = () => {
 
       <nav
         aria-label="Main navigation"
-        className={`flex flex-col items-stretch gap-1 p-2 fixed inset-x-4 top-16 bg-surface border border-border rounded-2xl shadow-card transition-all duration-200 md:static md:flex-row md:items-center md:gap-4 md:p-0 md:bg-transparent md:border-0 md:rounded-none md:shadow-none md:translate-y-0 md:opacity-100 md:visible lg:gap-6 ${openMenu ? "opacity-100 visible translate-y-0" : "opacity-0 invisible -translate-y-4"}`}
+        className={`flex flex-col items-stretch gap-0 p-2.5 fixed inset-x-4 top-16 bg-surface border border-border rounded-2xl shadow-card transition-all duration-200 lg:static lg:flex-row lg:items-center lg:gap-4 lg:p-0 lg:bg-transparent lg:border-0 lg:rounded-none lg:shadow-none lg:translate-y-0 lg:opacity-100 lg:visible xl:gap-6 ${openMenu ? "opacity-100 visible translate-y-0" : "opacity-0 invisible -translate-y-4"}`}
       >
         {navItems.map((item) => (
           <a
             key={item}
             href={`#${item.toLowerCase()}`}
             onClick={() => setOpenMenu(false)}
-            className="text-sm font-semibold text-muted transition-colors hover:text-accent"
+            className="text-sm font-semibold text-muted transition-colors hover:text-accent py-3.5 px-4 rounded-lg hover:bg-surface-2 lg:py-0 lg:px-0 lg:rounded-none lg:hover:bg-transparent"
           >
             {item}
           </a>
@@ -59,7 +59,7 @@ const Navbar = () => {
           aria-label="Toggle menu"
           aria-expanded={openMenu}
           onClick={() => setOpenMenu(!openMenu)}
-          className="grid place-items-center w-10 h-10 p-0 rounded-full text-foreground bg-surface border border-border transition-all hover:text-accent hover:translate-y-px md:hidden"
+          className="grid place-items-center w-10 h-10 p-0 rounded-full text-foreground bg-surface border border-border transition-all hover:text-accent hover:translate-y-px lg:hidden"
         >
           <Icon name={openMenu ? "close" : "menu"} />
         </button>
