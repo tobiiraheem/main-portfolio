@@ -17,7 +17,31 @@
       name="description"
       content="Raheem Oluwatobiloba - Software Engineer building distributed and scalable backend systems."
     />
+
     <link rel="icon" type="image/svg+xml" href="/logo.png" />
+
+    <script type="module">
+      ;(function () {
+        try {
+          const existingTheme = localStorage.getItem("theme")
+          const currentTheme =
+            existingTheme ||
+            (matchMedia("(prefers-color-scheme: dark)").matches
+              ? "dark"
+              : "light")
+          document.documentElement.setAttribute("data-theme", currentTheme)
+        } catch (error) {}
+      })()
+    </script>
+
+    <style>
+      html {
+        background-color: #101012;
+      }
+      html[data-theme="light"] {
+        background-color: #f5f7f2;
+      }
+    </style>
 
     <!-- Preconnect speeds up connection handshake -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -31,14 +55,6 @@
   </head>
   <body>
     <div id="root"></div>
-    <script type="module" src="/src/main.tsx">
-        ;(function () {
-        const existingTheme = localStorage.getItem("theme")
-        const currentTheme =
-          existingTheme ||
-          (matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light")
-        document.documentElement.setAttribute("data-theme", currentTheme)
-      })()
-    </script>
+    <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
