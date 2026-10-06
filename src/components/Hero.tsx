@@ -56,7 +56,7 @@ const Hero = () => {
         className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-[.65rem] text-muted no-underline text-[.64rem] tracking-[.16em] uppercase"
       >
         <span>Scroll</span>
-        <i
+        <span
           className="block w-px h-8.5 bg-linear-to-b from-accent-2 to-transparent animate-scroll-pulse"
           aria-hidden="true"
         />

@@ -26,7 +26,7 @@ const About = () => {
 
       <div>
         <p className="eyebrow">About me</p>
-        <h2 className="m-0 font-display font-extrabold text-[clamp(2.2rem,5vw,4rem)] leading-[1.08] tracking-tighter">
+        <h2 className="section-heading">
           Building reliable backend systems from 0 to production
         </h2>
 

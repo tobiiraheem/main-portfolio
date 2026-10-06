@@ -23,7 +23,7 @@ const Navbar = () => {
         aria-label="Raheem Oluwatobiloba, home"
         className="flex items-center gap-3 no-underline"
       >
-        <span className="grid place-items-center w-10 h-10 rounded-2xl text-[#06161c] bg-[#67d7cf] text-sm font-extrabold">
+        <span className="grid place-items-center w-10 h-10 rounded-xl text-[#06161c] bg-[#67d7cf] text-sm font-extrabold">
           RO
         </span>
         <strong className="hidden text-base sm:block">
