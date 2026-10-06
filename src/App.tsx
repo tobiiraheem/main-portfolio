@@ -3,10 +3,11 @@ import { BrowserRouter } from "react-router-dom"
 import {
   About,
   Contact,
-  Feedbacks,
+  Experience,
+  Education,
   Hero,
   Navbar,
-  TechStack,
+  Skills,
   Works,
 } from "./components"
 import { Section } from "./components/Section"
@@ -27,20 +28,47 @@ const App = () => {
         <Section id="about">
           <About />
         </Section>
-        {/* <Experience /> */}
-        <Section id="tech" alternate>
-          <TechStack />
+
+        <Section id="experience" alternate>
+          <Experience />
         </Section>
+
         <Section id="works">
           <Works />
         </Section>
-        <Section id="feedbacks" alternate>
-          <Feedbacks />
+
+        <Section id="skills" alternate>
+          <Skills />
         </Section>
-        <Section id="contact">
+
+        <Section id="education">
+          <Education />
+        </Section>
+
+        <Section
+          id="contact"
+          alternate
+          className="bg-[#087e8b] contact-section-bg text-[#edfaff]"
+        >
           <Contact />
         </Section>
       </main>
+
+      <footer className="py-5 px-[max(4vw,1.25rem)] text-[#9fb3c2] bg-[#07111f]">
+        <div className="flex flex-col gap-2 justify-between items-center text-[.6rem] sm:flex-row">
+          <p>&copy; {new Date().getFullYear()} Raheem Oluwatobiloba</p>
+          <a
+            href="#home"
+            className="flex items-center content-center gap-2 text-[#72ddd4]"
+          >
+            Back to top
+            <span
+              className="block w-px h-3 bg-linear-to-t from-accent-2 to-transparent animate-scroll-pulse-inverted"
+              aria-hidden="true"
+            />
+          </a>
+        </div>
+      </footer>
     </BrowserRouter>
   )
 }

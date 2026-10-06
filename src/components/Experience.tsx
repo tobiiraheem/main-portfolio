@@ -1,71 +1,74 @@
-// @ts-nocheck
+import type { IconName } from "./Icon"
+import Icon from "./Icon"
+import { SectionHeading } from "./Section"
 
-import { styles } from "../styles"
-import { experiences } from "../constants"
-import { motion } from "framer-motion"
-import { textVariant } from "../utils/motion"
+type Experience = {
+  company: { name: string; logo: IconName; logo_alt: string }
+  role: string
+  location: string
+  date: string
+  points: string[]
+}
 
-import "react-vertical-timeline-component/style.min.css"
-import {
-  VerticalTimeline,
-  VerticalTimelineElement,
-} from "react-vertical-timeline-component"
+const experiences: Experience[] = [
+  {
+    company: { name: "Gotedo LLC", logo: "gotedo", logo_alt: "GO" },
+    role: "Backend Engineer",
+    location: "Lagos, Nigeria",
+    date: "02.2024 - 02.2026",
+    points: [
+      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
+      "Participating in code reviews and providing constructive feedback to other developers.",
+    ],
+  },
+]
 
-const ExperienceCard = ({ experience, index }) => (
-  <VerticalTimelineElement
-    contentStyle={{ background: "#1d1836", color: "#fff" }}
-    contentArrowStyle={{ borderRight: "7px solid #232631" }}
-    date={experience.date}
-    iconStyle={{ background: experience.iconBg }}
-    icon={
-      <div className="w-full h-full items-center justify-center flex">
-        <img
-          src={experience.icon}
-          alt={experience.company_name}
-          className="object-contain w-[60%] h-[60%]"
-        />
+const ExperienceCard = ({ experience }: { experience: Experience }) => (
+  <article className="p-[clamp(1.5rem,4vw,2.6rem)] border  rounded-2xl shadow-card experience-card">
+    <div className="grid grid-cols-[auto_1fr] gap-4 items-center pb-7 border-b border-b-border md:grid-cols-[auto_1fr_auto]">
+      <span className="grid place-items-center w-13 h-13 text-[#06161c] bg-[#67d7cf] rounded-xl font-extrabold">
+        {/* <Icon name={experience.company.logo} /> */}
+        {experience.company.logo_alt}
+      </span>
+      <div>
+        <h3 className="m-0 font-bold text-[1.2rem] font-display">
+          {experience.role}
+        </h3>
+        <p className="mt-1 text-muted text-sm">
+          {experience.company.name} - {experience.location}
+        </p>
       </div>
-    }
-  >
-    <div>
-      <h3 className="font-bold text-white text-[24px]">{experience.title}</h3>
-
-      <p
-        className="font-semibold text-secondary text-[16px]"
-        style={{ margin: 0 }}
+      <time
+        dateTime=""
+        className="justify-self-start col-span-full mt-1 text-muted text-sm py-2 px-3 bg-accent-soft rounded-full font-bold md:justify-self-stretch md:col-span-1"
       >
-        {experience.company_name}
-      </p>
+        {experience.date}
+      </time>
     </div>
 
-    <ul className="ml-5 mt-5 space-y-2 list-disc">
+    <ul className="card-list">
       {experience.points.map((point, index) => (
-        <li
-          className="text-[14px] text-white-100 pl-1 tracking-wider"
-          key={`experience-point-${index}`}
-        >
+        <li key={index} className="card-list-item">
           {point}
         </li>
       ))}
     </ul>
-  </VerticalTimelineElement>
+  </article>
 )
 
 const Experience = () => {
   return (
     <>
-      <motion.div variants={textVariant()}>
-        <p className={styles.sectionSubText}>What have I been up to??</p>
-        <h2 className={styles.sectionHeadText}>Experience</h2>
-      </motion.div>
+      <SectionHeading
+        key="experience-section-heading"
+        label="Experience"
+        title="Shipping systems that hold up in production"
+        copy="Two years of hands-on ownership, from schema design and API architecture to the systems that keep services running reliably in production."
+      />
 
-      <div className="mt-2 flex flex-col">
-        <VerticalTimeline>
-          {experiences.map((experience, index) => (
-            <ExperienceCard key={index} experience={experience} />
-          ))}
-        </VerticalTimeline>
-      </div>
+      {experiences.map((experience, index) => (
+        <ExperienceCard key={index} experience={experience} />
+      ))}
     </>
   )
 }
