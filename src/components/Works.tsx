@@ -2,7 +2,6 @@
 
 import { styles } from "../styles"
 import { projects } from "../constants"
-import { github, website } from "../assets"
 import { fadeIn, textVariant } from "../utils/motion"
 import { motion } from "framer-motion"
 
@@ -51,16 +50,16 @@ const ProjectCard = ({
           <div className="flex gap-5">
             <div
               className="flex bg-white w-10 h-10 rounded-full cursor-pointer items-center justify-center"
-              onClick={() => window.open(site_link, "_blank")}
+              onClick={() => window.open("", "_blank")}
             >
-              <img src={website} alt="Website" className="object-fit" />
+              <img src="" alt="Website" className="object-fit" />
             </div>
             {/* remote repository icon */}
             <div
               className="flex black-gradient w-10 h-10 rounded-full cursor-pointer items-center justify-center"
               onClick={() => window.open(source_code_link, "_blank")}
             >
-              <img src={github} alt="GitHub" className="object-contain" />
+              <img src="" alt="GitHub" className="object-contain" />
             </div>
           </div>
         </div>

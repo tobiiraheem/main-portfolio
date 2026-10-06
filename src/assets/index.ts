@@ -8,15 +8,6 @@ import webDev from "./skills/web-dev.png"
 import devops from "./skills/devops.png"
 import techWriter from "./skills/tech-writer.png"
 
-import backend from "./backend.png"
-import creator from "./creator.png"
-import mobile from "./mobile.png"
-import web from "./web.png"
-import github from "./github.png"
-import website from "./website.png"
-import menu from "./menu.svg"
-import close from "./close.svg"
-
 import aws from "./tech/aws-icon.png"
 import css from "./tech/css-icon.png"
 import dO from "./tech/digitalocean-icon.png"
@@ -40,11 +31,6 @@ import shopify from "./company/shopify.png"
 import starbucks from "./company/starbucks.png"
 import tesla from "./company/tesla.png"
 
-import carrent from "./carrent.png"
-import jobit from "./jobit.png"
-import tripguide from "./tripguide.png"
-import { socials } from "../constants"
-
 import userMgmt from "./projects/ejs-app.png"
 import reactPlanner from "./projects/react-planner-app.png"
 
@@ -57,14 +43,6 @@ export {
   webDev,
   devops,
   techWriter,
-  backend,
-  creator,
-  mobile,
-  web,
-  github,
-  website,
-  menu,
-  close,
   aws,
   css,
   docker,
@@ -86,9 +64,6 @@ export {
   shopify,
   starbucks,
   tesla,
-  carrent,
-  jobit,
-  tripguide,
   userMgmt,
   reactPlanner,
 }
