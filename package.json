@@ -9,25 +9,17 @@
   },
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
-    "lint": "eslint src --ext js,jsx --report-unused-disable-directives --max-warnings 0",
+    "build": "tsc --noEmit && vite build",
+    "lint": "eslint src --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview"
   },
   "dependencies": {
-    "@emailjs/browser": "^3.12.1",
-    "@react-three/drei": "^9.122.0",
-    "@react-three/fiber": "^8.18.0",
-    "@tailwindcss/postcss": "^4.3.3",
-    "framer-motion": "^10.18.0",
-    "maath": "^0.7.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "react-router-dom": "^7.18.4",
-    "react-vertical-timeline-component": "^3.6.0",
-    "tailwindcss": "^4.3.3",
-    "three": "^0.154.0"
+    "tailwindcss": "^4.3.3"
   },
   "devDependencies": {
+    "@tailwindcss/vite": "^4.3.3",
     "@types/react": "^19.3.0",
     "@types/react-dom": "^19.3.0",
     "@vitejs/plugin-react": "^6.1.1",
@@ -35,7 +27,6 @@
     "eslint-plugin-react": "^7.37.5",
     "eslint-plugin-react-hooks": "^4.6.2",
     "eslint-plugin-react-refresh": "^0.3.5",
-    "postcss": "^8.5.28",
     "typescript": "^7.0.2",
     "vite": "^8.3.1"
   }

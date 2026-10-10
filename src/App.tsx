@@ -1,5 +1,3 @@
-import { BrowserRouter } from "react-router-dom"
-
 import {
   About,
   Contact,
@@ -15,7 +13,7 @@ import { Section } from "./components/Section"
 
 const App = () => {
   return (
-    <BrowserRouter>
+    <>
       <a
         href="#main"
         className="fixed left-4 -top-20 z-100 py-3 px-4 bg-surface border border-border rounded-md text-foreground font-semibold shadow-card focus:top-4 transition-[top]"
@@ -73,7 +71,7 @@ const App = () => {
           </a>
         </div>
       </footer>
-    </BrowserRouter>
+    </>
   )
 }
 
