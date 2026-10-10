@@ -8,7 +8,8 @@ import {
   Hero,
   Navbar,
   Skills,
-  Works,
+  Projects,
+  Research,
 } from "./components"
 import { Section } from "./components/Section"
 
@@ -33,21 +34,24 @@ const App = () => {
           <Experience />
         </Section>
 
-        <Section id="works">
-          <Works />
+        <Section id="projects">
+          <Projects />
         </Section>
 
-        <Section id="skills" alternate>
+        <Section id="research" alternate>
+          <Research />
+        </Section>
+
+        <Section id="skills">
           <Skills />
         </Section>
 
-        <Section id="education">
+        <Section id="education" alternate>
           <Education />
         </Section>
 
         <Section
           id="contact"
-          alternate
           className="bg-[#087e8b] contact-section-bg text-[#edfaff]"
         >
           <Contact />

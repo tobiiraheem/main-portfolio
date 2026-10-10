@@ -19,6 +19,7 @@
   --color-foreground: #102a35;
   --color-muted: #566c73;
   --color-border: #d5e2df;
+  --color-border-2: rgba(75, 139, 136, 0.22);
   --color-accent: #087f78;
   --color-accent-2: #10a59a;
   --color-accent-3: #284f8940;
@@ -64,10 +65,20 @@
     var(--color-surface),
     #f4faf7
   );
-  --color-education-card-border: rgba(75, 139, 136, 0.22);
+  --color-education-card-border: var(--color-border-2);
+  --color-project-card-bg: linear-gradient(
+    150deg,
+    rgba(254, 253, 248, 0.98),
+    rgba(240, 248, 246, 0.96)
+  );
+  --color-project-card-border: var(--color-border-2);
+  --color-research-card-bg: rgba(255, 253, 248, 0.66);
+  --color-research-card-border: var(--color-border-2);
 
   --shadow-card: 0 22px 60px rgba(29, 78, 82, 0.12);
   --shadow-education-card: 0 16px 40px rgba(37, 92, 94, 0.08);
+  --shadow-project-card: 0 16px 45px rgba(37, 92, 94, 0.09);
+  --shadow-research-card: 0 18px 50px rgba(37, 92, 94, 0.07);
 
   --animate-scroll-pulse: scrollPulse 1.7s ease-in-out infinite;
   --animate-scroll-pulse-inverted: scrollPulseInverted 1.7s ease-in-out infinite;
@@ -110,10 +121,16 @@
   --color-experience-card-bg: #1a2221;
   --color-experience-card-border: rgba(98, 214, 200, 0.18);
   --color-education-card-bg: #1b2927;
-  --color-education-card-border: rgba(98, 214, 200, 0.15);
+  --color-education-card-border: rgba(98, 214, 200, 0.19);
+  --color-project-card-bg: #172220;
+  --color-project-card-border: rgba(98, 214, 200, 0.15);
+  --color-research-card-bg: #251c24;
+  --color-research-card-border: rgba(188, 113, 174, 0.17);
 
   --shadow-card: 0 26px 75px rgba(0, 0, 0, 0.38);
   --shadow-education-card: 0 18px 48px rgba(0, 0, 0, 0.22);
+  --shadow-project-card: 0 20px 55px rgba(0, 0, 0, 0.24);
+  --shadow-research-card: 0 22px 60px rgba(0, 0, 0, 0.22);
 }
 
 @custom-variant dark (&:where([data-theme="dark"], [data-theme="dark"] *));
@@ -292,6 +309,12 @@
   background: var(--color-education-card-bg);
   border-color: var(--color-education-card-border);
   box-shadow: var(--shadow-education-card);
+}
+
+@utility project-card {
+  background: var(--color-project-card-bg);
+  border-color: var(--color-project-card-border);
+  box-shadow: var(--shadow-project-card);
 }
 
 @utility list-bullet {
