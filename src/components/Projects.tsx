@@ -64,7 +64,7 @@ const projects: Project[] = [
 
 const ProjectCard = ({ project, index }: ProjectCardProps) => {
   return (
-    <article className="project-card flex flex-col p-[clamp(1.5rem,3vw,2.2rem)] border rounded-2xl shadow-[0_15px_45px_rgba(32,58,90,0.05)] transition-[transform,box-shadow,border-color] duration-25 overflow-hidden hover:-translate-y-2 hover:border-accent hover:shadow-card">
+    <article className="project-card flex flex-col p-[clamp(1.5rem,3vw,2.2rem)] border rounded-2xl shadow-[0_15px_45px_rgba(32,58,90,0.05)] transition-[transform,box-shadow,border-color] duration-200 overflow-hidden hover:-translate-y-2 hover:border-accent hover:shadow-card">
       <div className="flex items-center justify-between gap-8">
         <span className="text-accent text-[1rem] font-bold font-display">
           {(index + 1).toString().padStart(2, "0")}
@@ -114,7 +114,7 @@ const ProjectCard = ({ project, index }: ProjectCardProps) => {
               href={project.github}
               target="_blank"
               rel="noreferrer"
-              className="transition-[opacity,translate] duration-20 hover:opacity-[.8] hover:translate-y-px"
+              className="transition-[opacity,translate] duration-200 hover:opacity-[.8] hover:translate-y-px"
             >
               <Icon name="github" size={18} />
             </a>
@@ -125,7 +125,7 @@ const ProjectCard = ({ project, index }: ProjectCardProps) => {
               href={project.website}
               target="_blank"
               rel="noreferrer"
-              className="transition-[opacity,translate] duration-20 hover:opacity-[.8] hover:translate-y-px"
+              className="transition-[opacity,translate] duration-200 hover:opacity-[.8] hover:translate-y-px"
             >
               <Icon name="website" size={18} />
             </a>

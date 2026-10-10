@@ -50,7 +50,7 @@ const ResearchCard = ({ research }: { research: ResearchItem }) => {
           target="_blank"
           rel="noreferrer"
           aria-label={`Read publication: ${research.title}`}
-          className="grid place-items-center w-10 h-10 text-accent border border-border rounded-full transition-[opacity,translate] duration-20 hover:opacity-[.8] hover:translate-y-px"
+          className="grid place-items-center w-10 h-10 text-accent border border-border rounded-full transition-[opacity,translate] duration-200 hover:opacity-[.8] hover:translate-y-px"
         >
           <Icon name="external" />
         </a>
