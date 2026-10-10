@@ -59,10 +59,17 @@ const App = () => {
       <footer className="py-5 px-[max(4vw,1.25rem)] text-[#9fb3c2] bg-[#07111f]">
         <div className="flex flex-col gap-2 justify-between items-center text-[.6rem] sm:flex-row">
           <p>&copy; {new Date().getFullYear()} Raheem Oluwatobiloba</p>
+
           <a
             href="#home"
-            className="flex items-center content-center gap-2 text-[#72ddd4]"
+            className="flex items-center content-center gap-2 text-[#72ddd4] transition-opacity hover:opacity-75"
           >
+            <img
+              src="/src/assets/nyancat.gif"
+              alt=""
+              aria-hidden="true"
+              className="w-8 h-auto -mb-0.5 opacity-90"
+            />
             Back to top
             <span
               className="block w-px h-3 bg-linear-to-t from-accent-2 to-transparent animate-scroll-pulse-inverted"
