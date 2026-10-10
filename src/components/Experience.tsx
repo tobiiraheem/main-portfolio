@@ -46,11 +46,9 @@ const ExperienceCard = ({ experience }: { experience: Experience }) => (
       </time>
     </div>
 
-    <ul className="card-list">
+    <ul className="list-bullet">
       {experience.points.map((point, index) => (
-        <li key={index} className="card-list-item">
-          {point}
-        </li>
+        <li key={index}>{point}</li>
       ))}
     </ul>
   </article>
