@@ -1,4 +1,3 @@
-import { technologies } from "../constants"
 import { SectionHeading } from "./Section"
 
 const skills: Record<string, string[]> = {
