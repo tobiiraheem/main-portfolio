@@ -3,7 +3,7 @@ import Icon from "./Icon"
 import { SectionHeading } from "./Section"
 
 type Experience = {
-  company: { name: string; logo: IconName; logo_alt: string }
+  company: { name: string; logo: IconName }
   role: string
   location: string
   date: string
@@ -12,13 +12,14 @@ type Experience = {
 
 const experiences: Experience[] = [
   {
-    company: { name: "Gotedo LLC", logo: "gotedo", logo_alt: "GO" },
+    company: { name: "Gotedo LLC", logo: "gotedo" },
     role: "Backend Engineer",
     location: "Lagos, Nigeria",
     date: "02.2024 - 02.2026",
     points: [
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+      "Designed and shipped a multi-product, multi-tier, region-based subscription system with support for auto-renewals, cancellations, and refunds, owning the full billing lifecycle.",
+      "Improved platform API performance through query optimization, Redis caching, and background job processing, reducing p95 latency by 33% and doubling throughput.",
+      "Collaborated with product and design teams to scope and deliver features end-to-end, from schema design to deployment.",
     ],
   },
 ]
@@ -39,17 +40,14 @@ const ExperienceCard = ({ experience }: { experience: Experience }) => (
         </p>
       </div>
 
-      <time
-        dateTime=""
-        className="justify-self-start col-span-full mt-1 text-muted text-sm py-2 px-3 bg-accent-soft rounded-full font-bold md:justify-self-stretch md:col-span-1"
-      >
+      <time className="justify-self-start col-span-full mt-1 text-muted text-sm py-2 px-3 bg-accent-soft rounded-full font-bold md:justify-self-stretch md:col-span-1">
         {experience.date}
       </time>
     </div>
 
     <ul className="list-bullet">
-      {experience.points.map((point, index) => (
-        <li key={index}>{point}</li>
+      {experience.points.map((point) => (
+        <li key={point}>{point}</li>
       ))}
     </ul>
   </article>
@@ -61,12 +59,15 @@ const Experience = () => {
       <SectionHeading
         key="experience-section-heading"
         label="Experience"
-        title="Shipping systems that hold up in production"
+        title="Shipping systems that hold up in production."
         copy="Two years of hands-on ownership, from schema design and API architecture to the systems that keep services running reliably in production."
       />
 
       {experiences.map((experience, index) => (
-        <ExperienceCard key={index} experience={experience} />
+        <ExperienceCard
+          key={`${experience.company.name}-${experience.role}`}
+          experience={experience}
+        />
       ))}
     </>
   )

@@ -69,8 +69,11 @@ const Research = () => {
       />
 
       <div className="border-t border-t-border px-6 bg-research-card-bg border border-research-card-border rounded-2xl shadow-research-card">
-        {researchItems.map((researchItem, index) => (
-          <ResearchCard key={index} research={researchItem} />
+        {researchItems.map((researchItem) => (
+          <ResearchCard
+            key={researchItem.description}
+            research={researchItem}
+          />
         ))}
       </div>
     </div>

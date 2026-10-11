@@ -28,9 +28,9 @@ const Education = () => {
           Languages
         </span>
         <div className="flex flex-wrap items-center gap-4">
-          {languages.map((language, index) => (
+          {languages.map((language) => (
             <p
-              key={index}
+              key={language}
               className="m-0 text-muted py-2 px-3 bg-surface border border-border rounded-2xl text-[.75rem]"
             >
               {language}

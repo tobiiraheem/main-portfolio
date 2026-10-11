@@ -27,7 +27,7 @@ const About = () => {
       <div>
         <p className="eyebrow">About me</p>
         <h2 className="section-heading">
-          Building reliable backend systems from 0 to production
+          Building reliable backend systems from 0 to production.
         </h2>
 
         <p className="mt-6 text-foreground text-[1.2rem] leading-[1.75]">
