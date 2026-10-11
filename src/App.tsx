@@ -10,6 +10,7 @@ import {
   Research,
 } from "./components"
 import { Section } from "./components/Section"
+import nyancat from "../assets/nyancat.png"
 
 const App = () => {
   return (
@@ -65,7 +66,7 @@ const App = () => {
             className="flex items-center content-center gap-2 text-[#72ddd4] transition-opacity hover:opacity-75"
           >
             <img
-              src="/src/assets/nyancat.gif"
+              src={nyancat}
               alt=""
               aria-hidden="true"
               className="w-8 h-auto -mb-0.5 opacity-90"
