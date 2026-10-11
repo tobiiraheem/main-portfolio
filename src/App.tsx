@@ -10,7 +10,7 @@ import {
   Research,
 } from "./components"
 import { Section } from "./components/Section"
-import nyancat from "../assets/nyancat.gif"
+import nyancat from "./assets/nyancat.gif"
 
 const App = () => {
   return (
