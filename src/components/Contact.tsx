@@ -26,7 +26,7 @@ const Contact = () => {
   return (
     <div className="grid grid-cols-[1fr] sm:grid-cols-[1.25fr_1.25fr] gap-[clamp(3rem,8vw,8rem)] items-end">
       <div>
-        <p className="eyebrow text-[#b6fff8] ">Let's connect</p>
+        <p className="eyebrow text-[#b6fff8]">Let's connect</p>
         <h2 className="section-heading max-w-240">
           Have a technical problem worth solving?
         </h2>
@@ -42,6 +42,7 @@ const Contact = () => {
             href={contact.href}
             target="_blank"
             rel="noreferrer"
+            key={contact.name}
             className="grid grid-cols-[auto_1fr_auto] gap-4 items-center p-4 text-[#efffff] border bg-linear-[rgba(6,27,35,.18)] border-[rgba(255,255,255,0.2)] rounded-xl text-[.85rem] hover:translate-x-1 hover:bg-linear-[rgba(6,27,35,.3)] transition-[translate] duration-200"
           >
             <Icon name={contact.icon} size={23} />

@@ -7,7 +7,7 @@ export enum Theme {
 
 export function useTheme(): { theme: Theme; toggle: () => void } {
   const [theme, setTheme] = useState<Theme>(() => {
-    let existingTheme = localStorage.getItem("theme") as Theme | null
+    const existingTheme = localStorage.getItem("theme") as Theme | null
     if (existingTheme && Object.values(Theme).includes(existingTheme)) {
       return existingTheme
     }

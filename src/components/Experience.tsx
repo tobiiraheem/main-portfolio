@@ -63,7 +63,7 @@ const Experience = () => {
         copy="Two years of hands-on ownership, from schema design and API architecture to the systems that keep services running reliably in production."
       />
 
-      {experiences.map((experience, index) => (
+      {experiences.map((experience) => (
         <ExperienceCard
           key={`${experience.company.name}-${experience.role}`}
           experience={experience}
