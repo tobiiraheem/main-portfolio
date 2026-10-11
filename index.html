@@ -1,13 +1,59 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/logo.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>raim.io || portfolio</title>
+    <meta
+      name="theme-color"
+      content="#ffffff"
+      media="(prefers-color-scheme: light)"
+    />
+    <meta
+      name="theme-color"
+      content="#07111f"
+      media="(prefers-color-scheme: dark)"
+    />
+    <meta
+      name="description"
+      content="Raheem Oluwatobiloba - Software Engineer building distributed and scalable backend systems."
+    />
+
+    <script type="module">
+      ;(function () {
+        try {
+          const existingTheme = localStorage.getItem("theme")
+          const currentTheme =
+            existingTheme ||
+            (matchMedia("(prefers-color-scheme: dark)").matches
+              ? "dark"
+              : "light")
+          document.documentElement.setAttribute("data-theme", currentTheme)
+        } catch (error) {}
+      })()
+    </script>
+
+    <style>
+      html {
+        background-color: #101012;
+      }
+      html[data-theme="light"] {
+        background-color: #f5f7f2;
+      }
+    </style>
+
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <!-- Preconnect speeds up connection handshake -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Raheem Oluwatobiloba | Software Engineer</title>
   </head>
   <body>
     <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
+    <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
