@@ -35,7 +35,7 @@ const skills: Record<string, string[]> = {
     "Python",
     "PyTorch",
     "torchaudio",
-    "Hugging Face",
+    "Kaggle",
     "CNN",
     "Residual Networks (ResNet)",
     "LaTeX",

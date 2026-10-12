@@ -51,7 +51,7 @@ const projects: Project[] = [
       "ResNet",
       "ESC-50",
       "CUDA",
-      "Hugging Face",
+      "Kaggle",
     ],
     github: "https://github.com/tobiiraheem/gambit_cnn",
   },
